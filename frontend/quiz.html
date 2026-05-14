@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz</title>
+</head>
+<body>
+
+<h1>Online Quiz</h1>
+
+<form id="quizForm">
+
+<p>Capital of India?</p>
+
+<input type="radio" name="q1" value="Delhi"> Delhi <br>
+<input type="radio" name="q1" value="Mumbai"> Mumbai <br>
+<input type="radio" name="q1" value="Chennai"> Chennai <br>
+<input type="radio" name="q1" value="Kolkata"> Kolkata <br><br>
+
+<button type="button" onclick="checkScore()">
+Submit
+</button>
+
+</form>
+
+<h2 id="result"></h2>
+
+<script>
+
+function checkScore(){
+
+    let score = 0;
+
+    let answer =
+    document.querySelector('input[name="q1"]:checked');
+
+    if(answer && answer.value === "Delhi"){
+
+        score++;
+    }
+
+    document.getElementById("result").innerHTML =
+    "Your Score: " + score;
+
+}
+
+</script>
+
+</body>
+</html>
